@@ -18,7 +18,7 @@ gtag('config', 'G-RFZ5Y45RPJ');
 
 console.log('foi');
 
-function mostra(){
+/*function mostra(){
 	alert('chamou função mostra');
 }
 
@@ -27,8 +27,10 @@ var teste = document.getElementsByClassName("menu-lista-download");
 
 console.log(teste);
 teste.addEventListener("click", mostra, false);
+*/
 
-/*
+
+document.addEventListener("DOMContentLoaded", loadNew, false);
 
 // Função para mudar o conteúdo de t2
 function modifyText() {
@@ -58,5 +60,4 @@ function loadNew() {
 }
 
 //document.addEventListener("DOMContentLoaded", load, false);
-document.addEventListener("DOMContentLoaded", loadNew, false);
-*/
+//document.addEventListener("DOMContentLoaded", loadNew, false);
