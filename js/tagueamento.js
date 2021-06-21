@@ -34,7 +34,17 @@ teste.addEventListener("click", mostra, false);
 var ee = document.querySelector(".card-montadoras");
 var ev = ee.getAttribute("data-id");
 
-console.log(document.querySelector("ev"));
+//console.log(document.querySelector("ev"));
+
+
+let btnGoods = document.querySelectorAll('.card-montadoras');
+for (var i = 0; i < btnGoods.length; i++) {
+    btnGoods[i].addEventListener('click', () => {
+        console.log(this.parentNode.getAttribute('data-id'));
+    });
+}
+
+
 //console.log(document.querySelector(".card-montadoras ipsum"));
 //console.log(document.querySelector(".card-montadoras dolor"));
 
