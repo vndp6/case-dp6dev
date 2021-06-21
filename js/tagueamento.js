@@ -46,4 +46,4 @@ function loadNew() {
 }
 
 //document.addEventListener("DOMContentLoaded", load, false);
-document.addEventListener("DOMContentLoaded", loadNew, false);
+//document.addEventListener("DOMContentLoaded", loadNew, false);
