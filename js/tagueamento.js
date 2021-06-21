@@ -37,7 +37,8 @@ var ev = ee.getAttribute("data-id");
 //console.log(document.querySelector("ev"));
 
 
-let btnGoods = document.querySelectorAll('.card-montadoras');
+//let btnGoods = document.querySelectorAll('.card-montadoras');
+var btnGoods = document.querySelectorAll('.card-montadoras');
 for (var i = 0; i < btnGoods.length; i++) {
     btnGoods[i].addEventListener('click', () => {
         //console.log(this.parentNode.getAttribute('data-id'));
