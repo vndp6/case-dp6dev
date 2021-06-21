@@ -33,7 +33,9 @@ teste.addEventListener("click", mostra, false);
 
 
 
-
+console.log(document.querySelector(".card-montadoras lorem"));
+console.log(document.querySelector(".card-montadoras ipsum"));
+console.log(document.querySelector(".card-montadoras dolor"));
 
 
 function modifyTextNew() {
