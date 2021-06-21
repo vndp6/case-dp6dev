@@ -40,7 +40,8 @@ var ev = ee.getAttribute("data-id");
 let btnGoods = document.querySelectorAll('.card-montadoras');
 for (var i = 0; i < btnGoods.length; i++) {
     btnGoods[i].addEventListener('click', () => {
-        console.log(this.parentNode.getAttribute('data-id'));
+        //console.log(this.parentNode.getAttribute('data-id'));
+        console.log(this.parentNode);
     });
 }
 
