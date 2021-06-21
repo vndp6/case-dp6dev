@@ -42,6 +42,11 @@ let btnGoods = document.querySelectorAll('.card-montadoras');
 //console.log(btnGoods);
 for (var i = 0; i < btnGoods.length; i++) {
     btnGoods[i].addEventListener('click', function() {
+        console.log(this);
+        console.log(this.parentNode);
+        console.log(this.parentNode.attributes);
+        
+        console.log(this.parentNode.getAttributeNode('data-id'));
         console.log(this.parentNode.getAttribute('data-id'));
         //console.log(btnGoods[i]);
         //console.log(this.parentNode);
