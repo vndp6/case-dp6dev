@@ -6,6 +6,7 @@
 // Caso tenha alguma dúvida sobre o case, não hesite em entrar em contato.
 console.log('abc d');
 
+/*
 //load assync ga
 window.onload = "https://www.googletagmanager.com/gtag/js?id=G-RFZ5Y45RPJ";
 
@@ -17,6 +18,7 @@ gtag('js', new Date());
 gtag('config', 'G-RFZ5Y45RPJ');
 
 console.log('foi');
+/*
 
 /*function mostra(){
 	alert('chamou função mostra');
