@@ -32,7 +32,7 @@ teste.addEventListener("click", mostra, false);
 */
 
 
-/*
+
 
 // Função para mudar o conteúdo de t2
 function modifyText() {
@@ -46,6 +46,9 @@ function modifyTextNew() {
   //var vn = document.getElementsByClassName("menu-lista-download");
   var vn = document.querySelector(".menu-lista-download");
   alert(vn.firstChild.nodeValue);
+  console.log('chama ga evento');
+  ga('send','event','menu','download_pdf','download_pdf');
+  console.log('isso. conferir no ga ua');
   //t2.firstChild.nodeValue = "three";
 }
 
@@ -65,4 +68,3 @@ function loadNew() {
 
 //document.addEventListener("DOMContentLoaded", load, false);
 document.addEventListener("DOMContentLoaded", loadNew, false);
-*/
