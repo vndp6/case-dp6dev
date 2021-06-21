@@ -18,7 +18,9 @@ gtag('config', 'G-RFZ5Y45RPJ');
 
 console.log('foi');
 
+console.log(document.getElementsByClassName("menu-lista-download"));
 
+/*
 
 // Função para mudar o conteúdo de t2
 function modifyText() {
@@ -49,3 +51,4 @@ function loadNew() {
 
 //document.addEventListener("DOMContentLoaded", load, false);
 document.addEventListener("DOMContentLoaded", loadNew, false);
+*/
