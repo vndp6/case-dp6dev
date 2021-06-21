@@ -42,7 +42,7 @@ function load() {
 function loadNew() {
 	console.log('loadNew');
   var el = document.getElementById("menu-lista-download");
-  el.addEventListener("click", modifyText, false);
+  el.addEventListener("click", modifyTextNew, false);
 }
 
 //document.addEventListener("DOMContentLoaded", load, false);
