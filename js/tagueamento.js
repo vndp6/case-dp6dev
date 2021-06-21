@@ -74,7 +74,7 @@ function loadContato() {
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
   var el = document.querySelector(".menu-lista-contato");
-  el.addEventListener("click", modifyTextNew, false);
+  el.addEventListener("click", modifyContato, false);
 }
 
 //document.addEventListener("DOMContentLoaded", load, false);
