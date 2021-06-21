@@ -42,7 +42,7 @@ function modifyTextNew() {
 	console.log('modifyTextNew');
   //var vn = document.getElementById("menu-lista-download"); 
   //var vn = document.getElementsByClassName("menu-lista-download");
-  var vn = document.querySelector("menu-lista-download");
+  var vn = document.querySelector(".menu-lista-download");
   alert(vn.firstChild.nodeValue);
   //t2.firstChild.nodeValue = "three";
 }
@@ -57,7 +57,7 @@ function loadNew() {
 	console.log('loadNew');
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
-  var el = document.querySelector("menu-lista-download");
+  var el = document.querySelector(".menu-lista-download");
   el.addEventListener("click", modifyTextNew, false);
 }
 
