@@ -34,29 +34,32 @@ teste.addEventListener("click", mostra, false);
 
 
 
-// Função para mudar o conteúdo de t2
-function modifyText() {
-  var t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = "three";
-}
+
 
 function modifyTextNew() {
 	console.log('modifyTextNew');
   //var vn = document.getElementById("menu-lista-download"); 
   //var vn = document.getElementsByClassName("menu-lista-download");
   var vn = document.querySelector(".menu-lista-download");
+
   alert(vn.firstChild.nodeValue);
-  console.log('chama ga evento');
+  console.log('chama ga download_pdf');
   ga('send','event','menu','download_pdf','download_pdf');
-  console.log('isso. conferir no ga ua');
+  console.log('isso download_pdf. conferir no ga ua');
   //t2.firstChild.nodeValue = "three";
 }
 
-// Função para adicionar uma espera de evento em t
-function load() {
-  var el = document.getElementById("t");
-  el.addEventListener("click", modifyText, false);
+function modifyContato() {
+	console.log('modifyContato');
+  var vn = document.querySelector(".menu-lista-contato");
+
+  alert(vn.firstChild.nodeValue);
+  console.log('chama ga contato');
+  ga('send','event','menu','entre_em_contato','link_externo');
+  console.log('isso ga contato. conferir no ga ua');
 }
+
+//----------------------
 
 function loadNew() {
 	console.log('loadNew');
@@ -66,5 +69,14 @@ function loadNew() {
   el.addEventListener("click", modifyTextNew, false);
 }
 
+function loadContato() {
+	console.log('loadContato');
+  //var el = document.getElementById("menu-lista-download");
+  //var el = document.getElementsByClassName("menu-lista-download");
+  var el = document.querySelector(".menu-lista-contato");
+  el.addEventListener("click", modifyTextNew, false);
+}
+
 //document.addEventListener("DOMContentLoaded", load, false);
 document.addEventListener("DOMContentLoaded", loadNew, false);
+document.addEventListener("DOMContentLoaded", loadContato, false);
