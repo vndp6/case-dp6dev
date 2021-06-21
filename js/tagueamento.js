@@ -31,11 +31,12 @@ console.log(teste);
 teste.addEventListener("click", mostra, false);
 */
 
+var ee = document.querySelector(".card-montadoras");
+var ev = ee.getAttribute("data-id");
 
-
-console.log(document.querySelector(".card-montadoras lorem"));
-console.log(document.querySelector(".card-montadoras ipsum"));
-console.log(document.querySelector(".card-montadoras dolor"));
+console.log(document.querySelector("ev"));
+//console.log(document.querySelector(".card-montadoras ipsum"));
+//console.log(document.querySelector(".card-montadoras dolor"));
 
 
 function modifyTextNew() {
