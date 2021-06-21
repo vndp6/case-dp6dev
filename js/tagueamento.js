@@ -18,7 +18,15 @@ gtag('config', 'G-RFZ5Y45RPJ');
 
 console.log('foi');
 
-console.log(document.getElementsByClassName("menu-lista-download"));
+function mostra(){
+	alert('chamou função mostra');
+}
+
+//console.log(document.getElementsByClassName("menu-lista-download"));
+var teste = document.getElementsByClassName("menu-lista-download");
+
+console.log(teste);
+teste.addEventListener("click", mostra, false);
 
 /*
 
