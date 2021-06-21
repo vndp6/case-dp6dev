@@ -30,7 +30,7 @@ teste.addEventListener("click", mostra, false);
 */
 
 
-
+/*
 
 // Função para mudar o conteúdo de t2
 function modifyText() {
@@ -63,3 +63,4 @@ function loadNew() {
 
 //document.addEventListener("DOMContentLoaded", load, false);
 document.addEventListener("DOMContentLoaded", loadNew, false);
+*/
