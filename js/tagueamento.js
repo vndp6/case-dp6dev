@@ -112,7 +112,7 @@ function loadContato() {
   el.addEventListener("click", modifyContato, false);
 }
 
-function loadMontadoras() {
+/*function loadMontadoras() {
 
   	let btnGoods = document.querySelectorAll('.card-montadoras');
   	var name;
@@ -120,14 +120,14 @@ function loadMontadoras() {
 		name = this.getAttribute('data-name');
 		btnGoods[i].addEventListener('click', modifyMontadoras(name), false);
 	}
-}
+}*/
 
-/*function loadMontadoras() {
+function loadMontadoras() {
 /*	console.log('loadMontadoras');
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
   var el = document.querySelector(".menu-lista-contato");
-  el.addEventListener("click", modifyContato, false);
+  el.addEventListener("click", modifyContato, false);*/
 
   	let btnGoods = document.querySelectorAll('.card-montadoras');
 	//var btnGoods = document.querySelectorAll('.card-montadoras');
@@ -149,9 +149,9 @@ function loadMontadoras() {
 
 		    temp = this.getAttribute('data-name');
 		    ga('send','event','analise','ver_mais',temp);
-		});
+		}, false);
 	}
-}*/
+}
 
 
 
