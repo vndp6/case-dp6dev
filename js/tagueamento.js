@@ -199,6 +199,15 @@ function loadSobre() {
   //let sobreData = document.querySelectorAll('.card-montadoras');
 }
 
+function loadAceitoSubmit(){
+	console.log('loadAceitoSubmit');
+
+	var vg = document.querySelector(".contato");
+	vg.addEventListener("onsubmit", function(){
+		alert('foi submit');
+	},false);
+}
+
 /*function loadSobre() {
 	console.log('loadSobre');
   //var el = document.getElementById("menu-lista-download");
@@ -268,3 +277,4 @@ document.addEventListener("DOMContentLoaded", loadNew, false);
 document.addEventListener("DOMContentLoaded", loadContato, false);
 document.addEventListener("DOMContentLoaded", loadMontadoras, false);
 document.addEventListener("DOMContentLoaded", loadSobre, false);
+document.addEventListener("DOMContentLoaded", loadAceitoSubmit, false);
