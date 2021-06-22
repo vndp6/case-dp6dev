@@ -78,7 +78,7 @@ function modifyMontadoras(texto){
 		
 		if(btnGoodsee[i].getAttribute('data-name') == texto){		
 			console.log(btnGoodsee[i].getAttribute('data-name'));
-			
+
 		}
 		//btnGoodsee[i].
 
@@ -170,7 +170,7 @@ function loadMontadoras() {
 	var temp;
 
 	for (var i = 0; i < btnGoods.length; i++) {
-		temp = btnGoodsee[i].getAttribute('data-name');
+		temp = btnGoods[i].getAttribute('data-name');
 		btnGoods[i].addEventListener('click', modifyMontadoras(temp), false);
 		console.log(btnGoods[i]);
 		console.log(temp);
