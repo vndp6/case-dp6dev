@@ -104,7 +104,7 @@ function modifyMontadoras(){
 
 function modifySobreNome() {
 	console.log('modifySobreNome');
-	alert('onchange');
+	//alert('onchange');
 	var id;
 	console.log(this);
 
@@ -118,7 +118,7 @@ function modifySobreNome() {
 
 function modifySobreEmail() {
 	console.log('modifySobreEmail');
-	alert('onchange');
+	//alert('onchange');
 	var id;
 	console.log(this);
 
@@ -132,7 +132,7 @@ function modifySobreEmail() {
 
 function modifySobreTelefone() {
 	console.log('modifySobreTelefone');
-	alert('onchange');
+	//alert('onchange');
 	var id;
 	console.log(this);
 
@@ -146,7 +146,7 @@ function modifySobreTelefone() {
 
 function modifySobreAceito() {
 	console.log('modifySobreAceito');
-	alert('onclick');
+	//alert('onclick');
 	var id;
 	console.log(this);
 
@@ -168,8 +168,8 @@ function modifySobreSubmit() {
 	//console.log(id);
 
   console.log('chama ga submit');
-  //ga('send','event','contato',id,'preencheu');
-  //console.log('isso ga aceito. conferir no ga ua');
+  ga('send','event','contato','enviado','enviado');
+  console.log('isso ga submit. conferir no ga ua');
 }
 
 
