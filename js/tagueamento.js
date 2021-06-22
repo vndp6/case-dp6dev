@@ -102,35 +102,16 @@ function modifyMontadoras(){
 	
 }
 
-/*function modifySobre() {
+function modifySobre() {
 	console.log('modifySobre');
 	alert('onchange');
 	var id;
   //var vn = document.getElementById("nome");
 
 	//console.log(vn);
-	console.log(this);
-
-	id = this.getAttribute('id')
-	console.log(id);
-  //alert(vn.firstChild.nodeValue);
-  
-  //console.log('chama ga contato');
-  //ga('send','event','menu','entre_em_contato','link_externo');
-  //console.log('isso ga contato. conferir no ga ua');
-}*/
-
-function modifySobre(id) {
-	console.log('modifySobre');
-	alert('onchange');
-	//var id;
-  //var vn = document.getElementById("nome");
-
-	//console.log(vn);
 	//console.log(this);
 
-
-	//id = this.getAttribute('id')
+	id = document.getElementById("nome").getAttribute('id');
 	console.log(id);
   //alert(vn.firstChild.nodeValue);
   
@@ -165,7 +146,7 @@ function loadSobre() {
 
   var el = document.getElementById("nome");
   id = el.getAttribute('id');
-  el.addEventListener("change", modifySobre(id), false);
+  el.addEventListener("change", modifySobre, false);
 
   var ek = document.getElementById("email");
   ek.addEventListener("onchange", modifySobre, false);
