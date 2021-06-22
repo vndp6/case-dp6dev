@@ -61,10 +61,15 @@ var temp;
 		});
 	}
 }*/
-function modifyMontadoras(text){
+/*function modifyMontadoras(text){
 	console.log('modifyMontadoras');
 	ga('send','event','analise','ver_mais',text);
 	console.log('isso modifyMontadoras. conferir no ga ua ' + text );
+}*/
+function modifyMontadoras(){
+	console.log('modifyMontadoras');
+	//ga('send','event','analise','ver_mais',text);
+	//console.log('isso modifyMontadoras. conferir no ga ua ' + text );
 }
 
 //console.log(document.querySelector(".card-montadoras ipsum"));
@@ -136,7 +141,9 @@ function loadMontadoras() {
 	var temp;
 
 	for (var i = 0; i < btnGoods.length; i++) {
-		btnGoods[i].addEventListener('click', function() {
+		btnGoods[i].addEventListener('click', modifyMontadoras, false);
+		console.log(btnGoods[i]);
+		/*btnGoods[i].addEventListener('click', function() {
 		    console.log(this);
 		    //console.log(this.parentNode);
 		    //console.log(this.parentNode.attributes);
@@ -150,7 +157,7 @@ function loadMontadoras() {
 		    temp = this.getAttribute('data-name');
 		    modifyMontadoras(temp);
 		    //ga('send','event','analise','ver_mais',temp);
-		}, false);
+		}, false);*/
 	}
 }
 
