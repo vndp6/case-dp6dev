@@ -220,7 +220,13 @@ function loadAceitoSubmit(){
 	/*vg.addEventListener("onsubmit", function(){
 		alert('foi submit');
 	},false);*/
-	vg.addEventListener("onsubmit", modifySobreSubmit ,false);
+	vg.addEventListener("submit", modifySobreSubmit ,false);
+
+	/*if(ele.addEventListener){
+    ele.addEventListener("submit", callback, false);  //Modern browsers
+}else if(ele.attachEvent){
+    ele.attachEvent('onsubmit', callback);            //Old IE
+}*/
 }
 
 /*function loadSobre() {
