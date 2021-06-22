@@ -102,7 +102,7 @@ function modifyMontadoras(){
 	
 }
 
-function modifySobre() {
+/*function modifySobre() {
 	console.log('modifySobre');
 	alert('onchange');
 	var id;
@@ -112,6 +112,25 @@ function modifySobre() {
 	console.log(this);
 
 	id = this.getAttribute('id')
+	console.log(id);
+  //alert(vn.firstChild.nodeValue);
+  
+  //console.log('chama ga contato');
+  //ga('send','event','menu','entre_em_contato','link_externo');
+  //console.log('isso ga contato. conferir no ga ua');
+}*/
+
+function modifySobre(id) {
+	console.log('modifySobre');
+	alert('onchange');
+	//var id;
+  //var vn = document.getElementById("nome");
+
+	//console.log(vn);
+	//console.log(this);
+
+
+	//id = this.getAttribute('id')
 	console.log(id);
   //alert(vn.firstChild.nodeValue);
   
@@ -143,7 +162,7 @@ function loadSobre() {
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
   var el = document.getElementById("nome");
-  el.addEventListener("onchange", modifySobre, false);
+  el.addEventListener("onchange", modifySobre(el.getAttribute('id')), false);
 
   var ek = document.getElementById("email");
   ek.addEventListener("onchange", modifySobre, false);
@@ -156,6 +175,25 @@ function loadSobre() {
 
   //let sobreData = document.querySelectorAll('.card-montadoras');
 }
+
+/*function loadSobre() {
+	console.log('loadSobre');
+  //var el = document.getElementById("menu-lista-download");
+  //var el = document.getElementsByClassName("menu-lista-download");
+  var el = document.getElementById("nome");
+  el.addEventListener("onchange", modifySobre, false);
+
+  var ek = document.getElementById("email");
+  ek.addEventListener("onchange", modifySobre, false);
+
+  var ej = document.getElementById("telefone");
+  ej.addEventListener("onchange", modifySobre, false);
+
+  var em = document.getElementById("aceito");
+  em.addEventListener("click", modifySobre, false);
+
+  //let sobreData = document.querySelectorAll('.card-montadoras');
+}*/
 
 
 function loadMontadoras() {
