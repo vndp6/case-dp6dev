@@ -61,6 +61,11 @@ var temp;
 		});
 	}
 }*/
+function modifyMontadoras(id,text){
+	console.log('modifyMontadoras');
+	ga('send','event','analise','ver_mais',text);
+	console.log('isso modifyMontadoras. conferir no ga ua ' + text );
+}
 
 //console.log(document.querySelector(".card-montadoras ipsum"));
 //console.log(document.querySelector(".card-montadoras dolor"));
@@ -108,11 +113,20 @@ function loadContato() {
 }
 
 function loadMontadoras() {
+
+  	let btnGoods = document.querySelectorAll('.card-montadoras');
+
+	for (var i = 0; i < btnGoods.length; i++) {
+		btnGoods[i].addEventListener('click', modifyMontadoras(this.getAttribute('data-id'),this.getAttribute('data-name')), false);
+	}
+}
+
+/*function loadMontadoras() {
 /*	console.log('loadMontadoras');
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
   var el = document.querySelector(".menu-lista-contato");
-  el.addEventListener("click", modifyContato, false);*/
+  el.addEventListener("click", modifyContato, false);
 
   	let btnGoods = document.querySelectorAll('.card-montadoras');
 	//var btnGoods = document.querySelectorAll('.card-montadoras');
@@ -136,7 +150,9 @@ function loadMontadoras() {
 		    ga('send','event','analise','ver_mais',temp);
 		});
 	}
-}
+}*/
+
+
 
 //document.addEventListener("DOMContentLoaded", load, false);
 document.addEventListener("DOMContentLoaded", loadNew, false);
