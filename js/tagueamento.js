@@ -148,7 +148,8 @@ function loadMontadoras() {
 		    //console.log(this.parentNode);
 
 		    temp = this.getAttribute('data-name');
-		    ga('send','event','analise','ver_mais',temp);
+		    modifyMontadoras(temp);
+		    //ga('send','event','analise','ver_mais',temp);
 		}, false);
 	}
 }
