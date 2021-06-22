@@ -111,9 +111,9 @@ function modifySobreNome() {
 	id = document.getElementById("nome").getAttribute('id');
 	console.log(id);
   
-  //console.log('chama ga contato');
-  //ga('send','event','menu','entre_em_contato','link_externo');
-  //console.log('isso ga contato. conferir no ga ua');
+  console.log('chama ga nome');
+  ga('send','event','contato',id,'preencheu');
+  console.log('isso ga nome. conferir no ga ua');
 }
 
 function modifySobreEmail() {
@@ -125,9 +125,9 @@ function modifySobreEmail() {
 	id = document.getElementById("email").getAttribute('id');
 	console.log(id);
   
-  //console.log('chama ga contato');
-  //ga('send','event','menu','entre_em_contato','link_externo');
-  //console.log('isso ga contato. conferir no ga ua');
+  console.log('chama ga email');
+  ga('send','event','contato',id,'preencheu');
+  console.log('isso ga email. conferir no ga ua');
 }
 
 function modifySobreTelefone() {
@@ -139,9 +139,9 @@ function modifySobreTelefone() {
 	id = document.getElementById("telefone").getAttribute('id');
 	console.log(id);
   
-  //console.log('chama ga contato');
-  //ga('send','event','menu','entre_em_contato','link_externo');
-  //console.log('isso ga contato. conferir no ga ua');
+  console.log('chama ga telefone');
+  ga('send','event','contato',id,'preencheu');
+  console.log('isso ga telefone. conferir no ga ua');
 }
 
 function modifySobreAceito() {
@@ -153,9 +153,9 @@ function modifySobreAceito() {
 	id = this.getAttribute('id');
 	console.log(id);
 
-  //console.log('chama ga contato');
-  //ga('send','event','menu','entre_em_contato','link_externo');
-  //console.log('isso ga contato. conferir no ga ua');
+  console.log('chama ga aceito');
+  ga('send','event','contato',id,'preencheu');
+  console.log('isso ga aceito. conferir no ga ua');
 }
 
 
