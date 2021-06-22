@@ -161,8 +161,11 @@ function loadSobre() {
 	console.log('loadSobre');
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
+  var id;
+
   var el = document.getElementById("nome");
-  el.addEventListener("onchange", modifySobre(el.getAttribute('id')), false);
+  id = el.getAttribute('id');
+  el.addEventListener("change", modifySobre(id), false);
 
   var ek = document.getElementById("email");
   ek.addEventListener("onchange", modifySobre, false);
