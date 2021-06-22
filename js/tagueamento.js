@@ -165,6 +165,8 @@ function loadMontadoras() {
 		// mostra o contador de cliques dentro da div clicada
 		
 		console.log(event);
+		console.log(event.target);
+		console.log(event.target.getAttribute('data-name'));
 		//event.target.innerHTML = "Total de cliques: " + event.detail;
 		}, false);
 	}
