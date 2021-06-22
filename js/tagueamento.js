@@ -145,15 +145,6 @@ function loadContato() {
   el.addEventListener("click", modifyContato, false);
 }
 
-/*function loadMontadoras() {
-
-  	let btnGoods = document.querySelectorAll('.card-montadoras');
-  	var name;
-	for (var i = 0; i < btnGoods.length; i++) {
-		name = this.getAttribute('data-name');
-		btnGoods[i].addEventListener('click', modifyMontadoras(name), false);
-	}
-}*/
 
 function loadMontadoras() {
 	console.log('loadMontadoras');
@@ -170,6 +161,15 @@ function loadMontadoras() {
 	var temp;
 
 	for (var i = 0; i < btnGoods.length; i++) {
+		btnGoods[i].addEventListener("click", function( event ) {
+		// mostra o contador de cliques dentro da div clicada
+		
+		console.log(event);
+		//event.target.innerHTML = "Total de cliques: " + event.detail;
+		}, false);
+	}
+
+	/*for (var i = 0; i < btnGoods.length; i++) {
 		temp = btnGoods[i].getAttribute('data-name');
 		btnGoods[i].addEventListener('click', modifyMontadoras(temp), false);
 		console.log(btnGoods[i]);
@@ -189,8 +189,8 @@ function loadMontadoras() {
 		    temp = this.getAttribute('data-name');
 		    modifyMontadoras(temp);
 		    //ga('send','event','analise','ver_mais',temp);
-		}, false);*/
-	}
+		}, false);
+	}*/
 }
 
 
