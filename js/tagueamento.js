@@ -158,15 +158,17 @@ function loadMontadoras() {
 	//var btnGoods = document.querySelectorAll('.card-montadoras');
 	//console.log(btnGoods);
 
-	var temp;
+	//var temp;
 
 	for (var i = 0; i < btnGoods.length; i++) {
 		btnGoods[i].addEventListener("click", function( event ) {
 		// mostra o contador de cliques dentro da div clicada
-		
+		var temp;
 		console.log(event);
 		console.log(event.target);
 		console.log(event.target.getAttribute('data-name'));
+		temp = event.target.getAttribute('data-name');
+		ga('send','event','analise','ver_mais',temp);
 		//event.target.innerHTML = "Total de cliques: " + event.detail;
 		}, false);
 	}
