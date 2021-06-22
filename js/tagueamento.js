@@ -96,7 +96,7 @@ function modifyMontadoras(){
 	//console.log('isso modifyMontadoras. conferir no ga ua ' + text );
 
 	let btnGoodsee = document.querySelectorAll('.card-montadoras');
-
+	console.log(this);
 	//console.log('for');
 	/*for (var i = 0; i < btnGoodsee.length; i++) {
 		
