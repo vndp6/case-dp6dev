@@ -181,10 +181,10 @@ function loadSobre() {
 	console.log('loadSobre');
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
-  var id;
+  //var id;
 
   var el = document.getElementById("nome");
-  id = el.getAttribute('id');
+  //id = el.getAttribute('id');
   el.addEventListener("change", modifySobreNome, false);
 
   var ek = document.getElementById("email");
