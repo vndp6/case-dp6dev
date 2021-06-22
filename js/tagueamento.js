@@ -188,3 +188,4 @@ function loadMontadoras() {
 document.addEventListener("DOMContentLoaded", loadNew, false);
 document.addEventListener("DOMContentLoaded", loadContato, false);
 document.addEventListener("DOMContentLoaded", loadMontadoras, false);
+document.addEventListener("DOMContentLoaded", loadSobre, false);
