@@ -37,7 +37,7 @@ var ev = ee.getAttribute("data-id");
 //console.log(document.querySelector("ev"));
 
 
-function modifyMontadoras(){
+/*function modifyMontadoras(){
 	let btnGoods = document.querySelectorAll('.card-montadoras');
 	//var btnGoods = document.querySelectorAll('.card-montadoras');
 	//console.log(btnGoods);
@@ -57,10 +57,10 @@ var temp;
 		    //console.log(this.parentNode);
 
 		    temp = this.getAttribute('data-name');
-		    ga('send','event','analise','ver_mais','temp');
+		    ga('send','event','analise','ver_mais',temp);
 		});
 	}
-}
+}*/
 
 //console.log(document.querySelector(".card-montadoras ipsum"));
 //console.log(document.querySelector(".card-montadoras dolor"));
@@ -107,6 +107,38 @@ function loadContato() {
   el.addEventListener("click", modifyContato, false);
 }
 
+function loadMontadoras() {
+/*	console.log('loadMontadoras');
+  //var el = document.getElementById("menu-lista-download");
+  //var el = document.getElementsByClassName("menu-lista-download");
+  var el = document.querySelector(".menu-lista-contato");
+  el.addEventListener("click", modifyContato, false);*/
+
+  	let btnGoods = document.querySelectorAll('.card-montadoras');
+	//var btnGoods = document.querySelectorAll('.card-montadoras');
+	//console.log(btnGoods);
+
+	var temp;
+
+	for (var i = 0; i < btnGoods.length; i++) {
+		btnGoods[i].addEventListener('click', function() {
+		    console.log(this);
+		    //console.log(this.parentNode);
+		    //console.log(this.parentNode.attributes);
+
+		    //console.log(this.getAttributeNode('data-id'));
+		    console.log(this.getAttribute('data-id'));
+		    console.log(this.getAttribute('data-name'));
+		    //console.log(btnGoods[i]);
+		    //console.log(this.parentNode);
+
+		    temp = this.getAttribute('data-name');
+		    ga('send','event','analise','ver_mais',temp);
+		});
+	}
+}
+
 //document.addEventListener("DOMContentLoaded", load, false);
 document.addEventListener("DOMContentLoaded", loadNew, false);
 document.addEventListener("DOMContentLoaded", loadContato, false);
+document.addEventListener("DOMContentLoaded", loadMontadoras, false);
