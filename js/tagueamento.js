@@ -104,9 +104,14 @@ function modifyMontadoras(){
 
 function modifySobre() {
 	console.log('modifySobre');
-  var vn = document.getElementById("nome");
+	var id;
+  //var vn = document.getElementById("nome");
 
-	console.log(vn);
+	//console.log(vn);
+	console.log(this);
+
+	id = this.getAttribute('id')
+	console.log(id);
   //alert(vn.firstChild.nodeValue);
   
   //console.log('chama ga contato');
