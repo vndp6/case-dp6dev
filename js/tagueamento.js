@@ -141,8 +141,16 @@ function loadSobre() {
 	console.log('loadSobre');
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
-  var el = document.getElementById("nome")
+  var el = document.getElementById("nome");
   el.addEventListener("click", modifySobre, false);
+
+  var ek = document.getElementById("email");
+  ek.addEventListener("click", modifySobre, false);
+
+  var ej = document.getElementById("telefone");
+  ej.addEventListener("click", modifySobre, false);
+
+  //let sobreData = document.querySelectorAll('.card-montadoras');
 }
 
 
