@@ -99,28 +99,18 @@ function modifyMontadoras(){
 	console.log('chama ga montadoras');
   ga('send','event','analise','ver_mais',nome);
   console.log('isso ga montadoras. conferir no ga ua');
-	//console.log('for');
-	/*for (var i = 0; i < btnGoodsee.length; i++) {
-		
-		if(btnGoodsee[i].getAttribute('data-name') == texto){		
-			console.log(btnGoodsee[i].getAttribute('data-name'));
+	
+}
 
-		}
+function modifySobre() {
+	console.log('modifySobre');
+  var vn = document.getElementById("nome");
 
-	}*/
-
-	/*for (var i = 0; i < btnGoods.length; i++) {
-		btnGoods[i].addEventListener("click", function( event ) {
-		// mostra o contador de cliques dentro da div clicada
-		var temp;
-		console.log(event);
-		console.log(event.target);
-		console.log(event.target.getAttribute('data-name'));
-		temp = event.target.getAttribute('data-name');
-		
-		//event.target.innerHTML = "Total de cliques: " + event.detail;
-		}, false);
-	}*/
+  alert(vn.firstChild.nodeValue);
+  console.log(vn);
+  //console.log('chama ga contato');
+  //ga('send','event','menu','entre_em_contato','link_externo');
+  //console.log('isso ga contato. conferir no ga ua');
 }
 
 //----------------------
@@ -139,6 +129,14 @@ function loadContato() {
   //var el = document.getElementsByClassName("menu-lista-download");
   var el = document.querySelector(".menu-lista-contato");
   el.addEventListener("click", modifyContato, false);
+}
+
+function loadSobre() {
+	console.log('loadSobre');
+  //var el = document.getElementById("menu-lista-download");
+  //var el = document.getElementsByClassName("menu-lista-download");
+  var el = document.getElementById("nome")
+  el.addEventListener("click", modifySobre, false);
 }
 
 
