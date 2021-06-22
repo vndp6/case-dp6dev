@@ -102,23 +102,62 @@ function modifyMontadoras(){
 	
 }
 
-function modifySobre() {
-	console.log('modifySobre');
+function modifySobreNome() {
+	console.log('modifySobreNome');
 	alert('onchange');
 	var id;
-  //var vn = document.getElementById("nome");
-
-	//console.log(vn);
-	//console.log(this);
+	console.log(this);
 
 	id = document.getElementById("nome").getAttribute('id');
 	console.log(id);
-  //alert(vn.firstChild.nodeValue);
   
   //console.log('chama ga contato');
   //ga('send','event','menu','entre_em_contato','link_externo');
   //console.log('isso ga contato. conferir no ga ua');
 }
+
+function modifySobreEmail() {
+	console.log('modifySobreEmail');
+	alert('onchange');
+	var id;
+	console.log(this);
+
+	id = document.getElementById("email").getAttribute('id');
+	console.log(id);
+  
+  //console.log('chama ga contato');
+  //ga('send','event','menu','entre_em_contato','link_externo');
+  //console.log('isso ga contato. conferir no ga ua');
+}
+
+function modifySobreTelefone() {
+	console.log('modifySobreTelefone');
+	alert('onchange');
+	var id;
+	console.log(this);
+
+	id = document.getElementById("telefone").getAttribute('id');
+	console.log(id);
+  
+  //console.log('chama ga contato');
+  //ga('send','event','menu','entre_em_contato','link_externo');
+  //console.log('isso ga contato. conferir no ga ua');
+}
+
+function modifySobreAceito() {
+	console.log('modifySobreAceito');
+	alert('onclick');
+	var id;
+	console.log(this);
+
+	id = this.getAttribute('id');
+	console.log(id);
+
+  //console.log('chama ga contato');
+  //ga('send','event','menu','entre_em_contato','link_externo');
+  //console.log('isso ga contato. conferir no ga ua');
+}
+
 
 //----------------------
 
@@ -146,16 +185,16 @@ function loadSobre() {
 
   var el = document.getElementById("nome");
   id = el.getAttribute('id');
-  el.addEventListener("change", modifySobre, false);
+  el.addEventListener("change", modifySobreNome, false);
 
   var ek = document.getElementById("email");
-  ek.addEventListener("onchange", modifySobre, false);
+  ek.addEventListener("change", modifySobreEmail, false);
 
   var ej = document.getElementById("telefone");
-  ej.addEventListener("onchange", modifySobre, false);
+  ej.addEventListener("change", modifySobreTelefone, false);
 
   var em = document.getElementById("aceito");
-  em.addEventListener("click", modifySobre, false);
+  em.addEventListener("click", modifySobreAceito, false);
 
   //let sobreData = document.querySelectorAll('.card-montadoras');
 }
