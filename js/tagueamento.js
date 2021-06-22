@@ -70,6 +70,32 @@ function modifyMontadoras(){
 	console.log('modifyMontadoras');
 	//ga('send','event','analise','ver_mais',text);
 	//console.log('isso modifyMontadoras. conferir no ga ua ' + text );
+
+	let btnGoodsee = document.querySelectorAll('.card-montadoras');
+
+	console.log('for');
+	for (var i = 0; i < btnGoodsee.length; i++) {
+		
+		console.log(btnGoodsee[i].getAttribute('data-name'));
+
+		//btnGoodsee[i].
+
+		/*btnGoods[i].addEventListener('click', function() {
+		    console.log(this);
+		    //console.log(this.parentNode);
+		    //console.log(this.parentNode.attributes);
+
+		    //console.log(this.getAttributeNode('data-id'));
+		    console.log(this.getAttribute('data-id'));
+		    console.log(this.getAttribute('data-name'));
+		    //console.log(btnGoods[i]);
+		    //console.log(this.parentNode);
+
+		    temp = this.getAttribute('data-name');
+		    modifyMontadoras(temp);
+		    //ga('send','event','analise','ver_mais',temp);
+		}, false);*/
+	}
 }
 
 //console.log(document.querySelector(".card-montadoras ipsum"));
@@ -128,6 +154,7 @@ function loadContato() {
 }*/
 
 function loadMontadoras() {
+	console.log('loadMontadoras');
 /*	console.log('loadMontadoras');
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
@@ -143,6 +170,7 @@ function loadMontadoras() {
 	for (var i = 0; i < btnGoods.length; i++) {
 		btnGoods[i].addEventListener('click', modifyMontadoras, false);
 		console.log(btnGoods[i]);
+
 		/*btnGoods[i].addEventListener('click', function() {
 		    console.log(this);
 		    //console.log(this.parentNode);
