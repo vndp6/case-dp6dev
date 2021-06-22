@@ -31,11 +31,6 @@ console.log(teste);
 teste.addEventListener("click", mostra, false);
 */
 
-var ee = document.querySelector(".card-montadoras");
-var ev = ee.getAttribute("data-id");
-
-//console.log(document.querySelector("ev"));
-
 
 /*function modifyMontadoras(){
 	let btnGoods = document.querySelectorAll('.card-montadoras');
