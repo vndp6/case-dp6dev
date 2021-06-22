@@ -158,6 +158,20 @@ function modifySobreAceito() {
   console.log('isso ga aceito. conferir no ga ua');
 }
 
+function modifySobreSubmit() {
+	console.log('modifySobreSubmit');
+	
+	//var id;
+	console.log(this);
+
+	//id = this.getAttribute('id');
+	//console.log(id);
+
+  console.log('chama ga submit');
+  //ga('send','event','contato',id,'preencheu');
+  //console.log('isso ga aceito. conferir no ga ua');
+}
+
 
 //----------------------
 
@@ -203,9 +217,10 @@ function loadAceitoSubmit(){
 	console.log('loadAceitoSubmit');
 
 	var vg = document.querySelector(".contato");
-	vg.addEventListener("onsubmit", function(){
+	/*vg.addEventListener("onsubmit", function(){
 		alert('foi submit');
-	},false);
+	},false);*/
+	vg.addEventListener("onsubmit", modifySobreSubmit ,false);
 }
 
 /*function loadSobre() {
