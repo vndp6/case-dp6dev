@@ -37,22 +37,30 @@ var ev = ee.getAttribute("data-id");
 //console.log(document.querySelector("ev"));
 
 
-let btnGoods = document.querySelectorAll('.card-montadoras');
-//var btnGoods = document.querySelectorAll('.card-montadoras');
-//console.log(btnGoods);
-for (var i = 0; i < btnGoods.length; i++) {
-    btnGoods[i].addEventListener('click', function() {
-        console.log(this);
-        //console.log(this.parentNode);
-        //console.log(this.parentNode.attributes);
+function modifyMontadoras(){
+	let btnGoods = document.querySelectorAll('.card-montadoras');
+	//var btnGoods = document.querySelectorAll('.card-montadoras');
+	//console.log(btnGoods);
 
-        console.log(this.getAttributeNode('data-id'));
-        console.log(this.getAttribute('data-id'));
-        //console.log(btnGoods[i]);
-        //console.log(this.parentNode);
-    });
+var temp;
+
+	for (var i = 0; i < btnGoods.length; i++) {
+		btnGoods[i].addEventListener('click', function() {
+		    console.log(this);
+		    //console.log(this.parentNode);
+		    //console.log(this.parentNode.attributes);
+
+		    //console.log(this.getAttributeNode('data-id'));
+		    console.log(this.getAttribute('data-id'));
+		    console.log(this.getAttribute('data-name'));
+		    //console.log(btnGoods[i]);
+		    //console.log(this.parentNode);
+
+		    temp = this.getAttribute('data-name');
+		    ga('send','event','analise','ver_mais','temp');
+		});
+	}
 }
-
 
 //console.log(document.querySelector(".card-montadoras ipsum"));
 //console.log(document.querySelector(".card-montadoras dolor"));
