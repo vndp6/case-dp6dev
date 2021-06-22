@@ -66,7 +66,7 @@ var temp;
 	ga('send','event','analise','ver_mais',text);
 	console.log('isso modifyMontadoras. conferir no ga ua ' + text );
 }*/
-function modifyMontadoras(){
+function modifyMontadoras(texto){
 	console.log('modifyMontadoras');
 	//ga('send','event','analise','ver_mais',text);
 	//console.log('isso modifyMontadoras. conferir no ga ua ' + text );
@@ -76,8 +76,10 @@ function modifyMontadoras(){
 	console.log('for');
 	for (var i = 0; i < btnGoodsee.length; i++) {
 		
-		console.log(btnGoodsee[i].getAttribute('data-name'));
-
+		if(btnGoodsee[i].getAttribute('data-name') == texto){		
+			console.log(btnGoodsee[i].getAttribute('data-name'));
+			
+		}
 		//btnGoodsee[i].
 
 		/*btnGoods[i].addEventListener('click', function() {
@@ -168,8 +170,10 @@ function loadMontadoras() {
 	var temp;
 
 	for (var i = 0; i < btnGoods.length; i++) {
-		btnGoods[i].addEventListener('click', modifyMontadoras, false);
+		temp = btnGoodsee[i].getAttribute('data-name');
+		btnGoods[i].addEventListener('click', modifyMontadoras(temp), false);
 		console.log(btnGoods[i]);
+		console.log(temp);
 
 		/*btnGoods[i].addEventListener('click', function() {
 		    console.log(this);
