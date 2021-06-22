@@ -98,7 +98,7 @@ function modifyMontadoras(){
 	//let btnGoodsee = document.querySelectorAll('.card-montadoras');
 	console.log(this);
 	nome = this.getAttribute('data-name');
-	console.log(this.getAttribute('data-name');
+	console.log(this.getAttribute('data-name'));
 		console.log(nome);
 
 	console.log('chama ga montadoras');
