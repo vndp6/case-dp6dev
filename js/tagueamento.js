@@ -94,9 +94,16 @@ function modifyMontadoras(){
 	console.log('modifyMontadoras');
 	//ga('send','event','analise','ver_mais',text);
 	//console.log('isso modifyMontadoras. conferir no ga ua ' + text );
-
-	let btnGoodsee = document.querySelectorAll('.card-montadoras');
+	var nome;
+	//let btnGoodsee = document.querySelectorAll('.card-montadoras');
 	console.log(this);
+	nome = this.getAttribute('data-name');
+	console.log(this.getAttribute('data-name');
+		console.log(nome);
+
+	console.log('chama ga montadoras');
+  ga('send','event','analise','ver_mais',nome);
+  console.log('isso ga montadoras. conferir no ga ua');
 	//console.log('for');
 	/*for (var i = 0; i < btnGoodsee.length; i++) {
 		
