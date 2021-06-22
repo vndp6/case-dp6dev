@@ -104,6 +104,7 @@ function modifyMontadoras(){
 
 function modifySobre() {
 	console.log('modifySobre');
+	alert('onchange');
 	var id;
   //var vn = document.getElementById("nome");
 
@@ -142,13 +143,16 @@ function loadSobre() {
   //var el = document.getElementById("menu-lista-download");
   //var el = document.getElementsByClassName("menu-lista-download");
   var el = document.getElementById("nome");
-  el.addEventListener("click", modifySobre, false);
+  el.addEventListener("onchange", modifySobre, false);
 
   var ek = document.getElementById("email");
-  ek.addEventListener("click", modifySobre, false);
+  ek.addEventListener("onchange", modifySobre, false);
 
   var ej = document.getElementById("telefone");
-  ej.addEventListener("click", modifySobre, false);
+  ej.addEventListener("onchange", modifySobre, false);
+
+  var em = document.getElementById("aceito");
+  em.addEventListener("click", modifySobre, false);
 
   //let sobreData = document.querySelectorAll('.card-montadoras');
 }
