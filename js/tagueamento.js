@@ -106,8 +106,9 @@ function modifySobre() {
 	console.log('modifySobre');
   var vn = document.getElementById("nome");
 
-  alert(vn.firstChild.nodeValue);
-  console.log(vn);
+	console.log(vn);
+  //alert(vn.firstChild.nodeValue);
+  
   //console.log('chama ga contato');
   //ga('send','event','menu','entre_em_contato','link_externo');
   //console.log('isso ga contato. conferir no ga ua');
