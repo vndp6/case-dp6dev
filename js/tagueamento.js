@@ -83,14 +83,17 @@ function modifySobreEmail() {
 	console.log('modifySobreEmail');
 
 	let id;
-	console.log(this);
+	//console.log(this);
 
-	id = document.getElementById("email").getAttribute('id');
+	id = document.querySelector('form > ul').querySelector("#email").getAttribute("id");
+
+	//id = document.getElementById("email").getAttribute('id');
 	console.log(id);
 
 	console.log('chama ga email');
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga email. conferir no ga ua');
+
 }
 
 function modifySobreTelefone() {
@@ -178,43 +181,18 @@ function loadSobre() {
 			//	el = document.querySelector('form > ul').querySelector("#nome");
 
 		(el != null) ? el.querySelector("#nome").addEventListener("change", modifySobreNome, false) : null;
-			
-		  //id = el.getAttribute('id');
-		  //el.addEventListener("change", modifySobreNome, false);
 
-		  /*el.addEventListener("change", function(){
-		  	let id;
-			//console.log(this);
 
-			//id = document.getElementById("nome").getAttribute('id');
-			id = document.querySelector('form > ul').querySelector("#nome").getAttribute("id");
-			console.log(id);
-
-			console.log('chama ga nome');
-			ga('send','event','contato',id,'preencheu');
-			console.log('isso ga nome. conferir no ga ua');
-
-		  }, false);*/
-
-	console.log("el antes");
-	console.log(el);
-	//let el = document.querySelector('form > ul');
-	let el ;
-	console.log("el depois");
-	console.log(el);
-
-	el = document.querySelector('form > ul');
-	console.log("el depois atribuicao");
-	console.log(el);
-/*
   //let ek = document.getElementById("email");
   //let ek = document.querySelector('form > ul').querySelector("#email");
-  let ek = document.querySelector('form > ul');
+  let em = document.querySelector('form > ul');
 
-  if(ek != null){
-	ek = document.querySelector('form > ul').querySelector("#email");
-  //ek.addEventListener("change", modifySobreEmail, false);
-  ek.addEventListener("change", function(){
+  (em != null) ? em.querySelector("#email").addEventListener("change", modifySobreEmail, false) : null;
+
+  /*if(em != null){
+	em = document.querySelector('form > ul').querySelector("#email");
+  //em.addEventListener("change", modifySobreEmail, false);
+  em.addEventListener("change", function(){
   	  let id;
 	//console.log(this);
 
@@ -228,12 +206,12 @@ function loadSobre() {
   }, false);
 }*/
 
-//****************
-  //let ej = document.getElementById("telefone");
-  //let ej = document.querySelector('form > ul').querySelector("#telefone");
-  let ej = document.querySelector('form > ul #email');
 
-  (ej != null) ? ej.addEventListener("click", modifySobreEmail, false) : null;
+  //let en = document.getElementById("telefone");
+  //let en = document.querySelector('form > ul').querySelector("#telefone");
+  let en = document.querySelector('form > ul #email');
+
+  (en != null) ? en.addEventListener("change", modifySobreTelefone, false); : null;
   
 /*
   //ej.addEventListener("change", modifySobreTelefone, false);
@@ -252,10 +230,12 @@ function loadSobre() {
 	console.log('isso ga telefone. conferir no ga ua');
   }, false);*/
 
-  
-  let em = document.getElementById("aceito");
-  //em.addEventListener("click", modifySobreAceito, false);
-  em.addEventListener("click", function(e){
+
+//****************
+
+  let eo = document.getElementById("aceito");
+  //eo.addEventListener("click", modifySobreAceito, false);
+  eo.addEventListener("click", function(e){
   	  let id;
 	console.log(this);
 
