@@ -58,8 +58,9 @@ function loadSobre() {
 	//let el = document.getElementById("nome");
 	//let el = document.querySelector('form > ul').querySelector("#nome");
 	let el = document.querySelector('form > ul');
-	if( el != null)
+	if( el != null){
 		el = document.querySelector('form > ul').querySelector("#nome");
+	
   //id = el.getAttribute('id');
   //el.addEventListener("change", modifySobreNome, false);
 
@@ -76,6 +77,7 @@ function loadSobre() {
 	console.log('isso ga nome. conferir no ga ua');
 
   }, false);
+	}
 
 
   //let ek = document.getElementById("email");
