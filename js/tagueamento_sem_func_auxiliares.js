@@ -19,156 +19,45 @@ gtag('config', 'G-RFZ5Y45RPJ');
 console.log('foi');
 */
 
-function modifyDownload() {
-
-	console.log('modifyDownload');
-  
-  //let vn = document.querySelector(".menu-lista-download");
-
-  //alert(vn.firstChild.nodeValue);
-  console.log('chama ga download_pdf');
-  ga('send','event','menu','download_pdf','download_pdf');
-  console.log('isso download_pdf. conferir no ga ua');
-}
-
-function modifyContato() {
-
-	console.log('modifyContato');
-
-	//let vn = document.querySelector(".menu-lista-contato");
-
-	//alert(vn.firstChild.nodeValue);
-	console.log('chama ga contato');
-	ga('send','event','menu','entre_em_contato','link_externo');
-	console.log('isso ga contato. conferir no ga ua');
-}
-
-function modifyMontadoras(){
-	console.log('modifyMontadoras');
-
-	let nome;
-
-	console.log(this);
-	nome = this.getAttribute('data-name');
-	console.log(this.getAttribute('data-name'));
-	console.log(nome);
-
-	console.log('chama ga montadoras');
-	ga('send','event','analise','ver_mais',nome);
-	console.log('isso ga montadoras. conferir no ga ua');
-}
-
-function modifySobreNome() {
-	console.log('modifySobreNome');
-
-	let id;
-	console.log(this);
-
-	id = document.getElementById("nome").getAttribute('id');
-	console.log(id);
-
-	console.log('chama ga nome');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga nome. conferir no ga ua');
-}
-
-function modifySobreEmail() {
-	console.log('modifySobreEmail');
-
-	let id;
-	console.log(this);
-
-	id = document.getElementById("email").getAttribute('id');
-	console.log(id);
-
-	console.log('chama ga email');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga email. conferir no ga ua');
-}
-
-function modifySobreTelefone() {
-	console.log('modifySobreTelefone');
-
-	let id;
-	console.log(this);
-
-	id = document.getElementById("telefone").getAttribute('id');
-	console.log(id);
-
-	console.log('chama ga telefone');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga telefone. conferir no ga ua');
-}
-
-function modifySobreAceito() {
-	console.log('modifySobreAceito');
-
-	let id;
-	console.log(this);
-
-	id = this.getAttribute('id');
-	console.log(id);
-
-	console.log('chama ga aceito');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga aceito. conferir no ga ua');
-}
-
-function modifySobreSubmit() {
-	console.log('modifySobreSubmit');
-	console.log(this);
-	console.log('chama ga submit');
-
-	ga('send','event','contato','enviado','enviado');
-
-	console.log('isso ga submit. conferir no ga ua');
-}
-
-function modifySobreEmail() {
-	console.log('modifySobreEmail');
-	alert('chamou');
-	/*let id;
-	console.log(this);
-
-	id = document.getElementById("email").getAttribute('id');
-	console.log(id);
-
-	console.log('chama ga email');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga email. conferir no ga ua');*/
-}
-
 //----------------------
 
-function loadDownload() {
-	
+function loadNew() {
 	console.log('loadNew');
 
 	let el = document.querySelector(".menu-lista-download");
-  	(el != null) ? el.addEventListener("click", modifyDownload, false) : null;
+  //el.addEventListener("click", modifyTextNew, false);
+  el.addEventListener("click", function(e) {
+
+  	console.log(this);
+  	console.log('chama ga download_pdf');
+  	ga('send','event','menu','download_pdf','download_pdf');
+  	console.log('isso download_pdf. conferir no ga ua');
+  }, false);
 }
 
 function loadContato() {
-
 	console.log('loadContato');
 
 	let el = document.querySelector(".menu-lista-contato");
-  	(el != null) ? el.addEventListener("click", modifyContato, false) : null;
+  //el.addEventListener("click", modifyContato, false);
+  el.addEventListener("click", function(e) {
+  	console.log('chama ga contato');
+  	ga('send','event','menu','entre_em_contato','link_externo');
+  	console.log('isso ga contato. conferir no ga ua');
+
+  }, false);
+
 }
 
 function loadSobre() {
-	
 	console.log('loadSobre');
 
 	//essa parte aqui tem que reescrever melhor ... pois só funciona quando esta navegando
 	//na pagina sobre.html
 
 	//let el = document.getElementById("nome");
-	//let el = document.querySelector('form > ul').querySelector("#nome");
-	let el = document.querySelector('form > ul');
-	if( el != null){
-		el = document.querySelector('form > ul').querySelector("#nome");
-	
+	let el = document.querySelector('form > ul').querySelector("#nome");
+
   //id = el.getAttribute('id');
   //el.addEventListener("change", modifySobreNome, false);
 
@@ -185,16 +74,12 @@ function loadSobre() {
 	console.log('isso ga nome. conferir no ga ua');
 
   }, false);
-	}
+	
 
 
   //let ek = document.getElementById("email");
-  //let ek = document.querySelector('form > ul').querySelector("#email");
-  let ek = document.querySelector('form > ul');
+  let ek = document.querySelector('form > ul').querySelector("#email");
 
-  if(ek != null){
-	ek = document.querySelector('form > ul').querySelector("#email");
-  //ek.addEventListener("change", modifySobreEmail, false);
   ek.addEventListener("change", function(){
   	  let id;
 	//console.log(this);
@@ -207,16 +92,15 @@ function loadSobre() {
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga email. conferir no ga ua');
   }, false);
-}
+
 
 
   //let ej = document.getElementById("telefone");
-  //let ej = document.querySelector('form > ul').querySelector("#telefone");
-  let ej = document.querySelector('form > ul #email');
+  let ej = document.querySelector('form > ul').querySelector("#telefone");
 
-  (ej != null) ? ej.addEventListener("click", modifySobreEmail, false) : null;
+  //(ej != null) ? ej.addEventListener("click", modifySobreEmail, false) : null;
   
-/*
+
   //ej.addEventListener("change", modifySobreTelefone, false);
   //ej.addEventListener("change", function(e){
   	ej.addEventListener("change", function(){
@@ -231,7 +115,7 @@ function loadSobre() {
 	console.log('chama ga telefone');
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga telefone. conferir no ga ua');
-  }, false);*/
+  }, false);
 
   
   let em = document.getElementById("aceito");
@@ -295,7 +179,7 @@ function loadMontadoras() {
 }
 
 //document.addEventListener("DOMContentLoaded", load, false);
-document.addEventListener("DOMContentLoaded", loadDownload, false);
+document.addEventListener("DOMContentLoaded", loadNew, false);
 document.addEventListener("DOMContentLoaded", loadContato, false);
 document.addEventListener("DOMContentLoaded", loadMontadoras, false);
 document.addEventListener("DOMContentLoaded", loadSobre, false);
