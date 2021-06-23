@@ -81,8 +81,11 @@ function loadSobre() {
 
 
   //let ek = document.getElementById("email");
-  let ek = document.querySelector('form > ul').querySelector("#email");
+  //let ek = document.querySelector('form > ul').querySelector("#email");
+  let ek = document.querySelector('form > ul');
 
+  if(ek != null){
+	ek = document.querySelector('form > ul').querySelector("#email");
   //ek.addEventListener("change", modifySobreEmail, false);
   ek.addEventListener("change", function(){
   	  let id;
@@ -96,10 +99,12 @@ function loadSobre() {
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga email. conferir no ga ua');
   }, false);
+}
 
 
   //let ej = document.getElementById("telefone");
-  let ej = document.querySelector('form > ul').querySelector("#telefone");
+  //let ej = document.querySelector('form > ul').querySelector("#telefone");
+  let ej = document.querySelector('form > ul #email');
 
   //ej.addEventListener("change", modifySobreTelefone, false);
   //ej.addEventListener("change", function(e){
