@@ -211,7 +211,7 @@ function loadSobre() {
   //let en = document.querySelector('form > ul').querySelector("#telefone");
   let en = document.querySelector('form > ul #email');
 
-  (en != null) ? en.addEventListener("change", modifySobreTelefone, false); : null;
+  (en != null) ? en.addEventListener("change", modifySobreTelefone, false) : null;
   
 /*
   //ej.addEventListener("change", modifySobreTelefone, false);
