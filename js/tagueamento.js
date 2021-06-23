@@ -195,7 +195,8 @@ function loadSobre() {
 			console.log('isso ga nome. conferir no ga ua');
 
 		  }, false);
-			}
+
+//****************
 
 
   //let ek = document.getElementById("email");
