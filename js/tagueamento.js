@@ -62,15 +62,22 @@ function modifySobreNome() {
 	console.log('modifySobreNome');
 
 	let id;
-	console.log(this);
+	//console.log(this);
 
-	id = document.getElementById("nome").getAttribute('id');
+	/*id = document.getElementById("nome").getAttribute('id');
 	console.log(id);
 
 	console.log('chama ga nome');
 	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga nome. conferir no ga ua');
-}
+	console.log('isso ga nome. conferir no ga ua');*/
+
+	id = document.querySelector('form > ul').querySelector("#nome").getAttribute("id");
+			console.log(id);
+
+			console.log('chama ga nome');
+			ga('send','event','contato',id,'preencheu');
+			console.log('isso ga nome. conferir no ga ua');
+}		
 
 function modifySobreEmail() {
 	console.log('modifySobreEmail');
@@ -157,7 +164,7 @@ function loadContato() {
 }
 
 function loadSobre() {
-	
+
 	console.log('loadSobre');
 
 	//essa parte aqui tem que reescrever melhor ... pois só funciona quando esta navegando
@@ -165,27 +172,30 @@ function loadSobre() {
 
 	//let el = document.getElementById("nome");
 	//let el = document.querySelector('form > ul').querySelector("#nome");
-	let el = document.querySelector('form > ul');
-	if( el != null){
-		el = document.querySelector('form > ul').querySelector("#nome");
-	
-  //id = el.getAttribute('id');
-  //el.addEventListener("change", modifySobreNome, false);
 
-  el.addEventListener("change", function(){
-  	let id;
-	//console.log(this);
+			let el = document.querySelector('form > ul');
+			//if( el != null){
+			//	el = document.querySelector('form > ul').querySelector("#nome");
 
-	//id = document.getElementById("nome").getAttribute('id');
-	id = document.querySelector('form > ul').querySelector("#nome").getAttribute("id");
-	console.log(id);
+		(el != null) ? el.querySelector("#nome").addEventListener("change", modifySobreNome, false) : null;
+			
+		  //id = el.getAttribute('id');
+		  //el.addEventListener("change", modifySobreNome, false);
 
-	console.log('chama ga nome');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga nome. conferir no ga ua');
+		  el.addEventListener("change", function(){
+		  	let id;
+			//console.log(this);
 
-  }, false);
-	}
+			//id = document.getElementById("nome").getAttribute('id');
+			id = document.querySelector('form > ul').querySelector("#nome").getAttribute("id");
+			console.log(id);
+
+			console.log('chama ga nome');
+			ga('send','event','contato',id,'preencheu');
+			console.log('isso ga nome. conferir no ga ua');
+
+		  }, false);
+			}
 
 
   //let ek = document.getElementById("email");
