@@ -56,8 +56,10 @@ function loadSobre() {
 	//na pagina sobre.html
 
 	//let el = document.getElementById("nome");
-	let el = document.querySelector('form > ul').querySelector("#nome");
+	//let el = document.querySelector('form > ul').querySelector("#nome");
 
+	if(let el = document.querySelector('form > ul') != null)
+		el = document.querySelector('form > ul').querySelector("#nome");
   //id = el.getAttribute('id');
   //el.addEventListener("change", modifySobreNome, false);
 
