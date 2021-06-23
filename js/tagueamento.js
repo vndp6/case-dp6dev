@@ -55,15 +55,18 @@ function loadSobre() {
 	//essa parte aqui tem que reescrever melhor ... pois só funciona quando esta navegando
 	//na pagina sobre.html
 
-	let el = document.getElementById("nome");
+	//let el = document.getElementById("nome");
+	let el = document.querySelector('form > ul').querySelector("#nome");
+
   //id = el.getAttribute('id');
   //el.addEventListener("change", modifySobreNome, false);
 
-  el.addEventListener("change", function(e){
+  el.addEventListener("change", function(){
   	let id;
-	console.log(this);
+	//console.log(this);
 
-	id = document.getElementById("nome").getAttribute('id');
+	//id = document.getElementById("nome").getAttribute('id');
+	id = document.querySelector('form > ul').querySelector("#nome").getAttribute("id");
 	console.log(id);
 
 	console.log('chama ga nome');
@@ -73,13 +76,16 @@ function loadSobre() {
   }, false);
 
 
-  let ek = document.getElementById("email");
-  //ek.addEventListener("change", modifySobreEmail, false);
-  ek.addEventListener("change", function(e){
-  	  let id;
-	console.log(this);
+  //let ek = document.getElementById("email");
+  let ek = document.querySelector('form > ul').querySelector("#email");
 
-	id = document.getElementById("email").getAttribute('id');
+  //ek.addEventListener("change", modifySobreEmail, false);
+  ek.addEventListener("change", function(){
+  	  let id;
+	//console.log(this);
+
+	//id = document.getElementById("email").getAttribute('id');
+	id = document.querySelector('form > ul').querySelector("#email").getAttribute("id");
 	console.log(id);
 
 	console.log('chama ga email');
@@ -88,14 +94,18 @@ function loadSobre() {
   }, false);
 
 
-  let ej = document.getElementById("telefone");
+  //let ej = document.getElementById("telefone");
+  let ej = document.querySelector('form > ul').querySelector("#telefone");
+
   //ej.addEventListener("change", modifySobreTelefone, false);
-  ej.addEventListener("change", function(e){
+  //ej.addEventListener("change", function(e){
+  	ej.addEventListener("change", function(){
 
   	let id;
-	console.log(this);
+	//console.log(this);
 
-	id = document.getElementById("telefone").getAttribute('id');
+	//id = document.getElementById("telefone").getAttribute('id');
+	id = document.querySelector('form > ul').querySelector("#telefone").getAttribute("id");
 	console.log(id);
 
 	console.log('chama ga telefone');
@@ -128,9 +138,10 @@ function loadAceitoSubmit(){
 	let vg = document.querySelector(".contato");
 	//vg.addEventListener("submit", modifySobreSubmit ,false);
 
-	vg.addEventListener("submit", function(e){
+	//vg.addEventListener("submit", function(e){
+	vg.addEventListener("submit", function(){	
 
-		console.log(this);
+		//console.log(this);
 		console.log('chama ga submit');
 
 		ga('send','event','contato','enviado','enviado');
