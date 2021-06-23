@@ -182,7 +182,7 @@ function loadSobre() {
 		  //id = el.getAttribute('id');
 		  //el.addEventListener("change", modifySobreNome, false);
 
-		  el.addEventListener("change", function(){
+		  /*el.addEventListener("change", function(){
 		  	let id;
 			//console.log(this);
 
@@ -194,11 +194,19 @@ function loadSobre() {
 			ga('send','event','contato',id,'preencheu');
 			console.log('isso ga nome. conferir no ga ua');
 
-		  }, false);
+		  }, false);*/
 
-//****************
+	console.log("el antes");
+	console.log(el);
+	//let el = document.querySelector('form > ul');
+	let el ;
+	console.log("el depois");
+	console.log(el);
 
-
+	el = document.querySelector('form > ul');
+	console.log("el depois atribuicao");
+	console.log(el);
+/*
   //let ek = document.getElementById("email");
   //let ek = document.querySelector('form > ul').querySelector("#email");
   let ek = document.querySelector('form > ul');
@@ -218,9 +226,9 @@ function loadSobre() {
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga email. conferir no ga ua');
   }, false);
-}
+}*/
 
-
+//****************
   //let ej = document.getElementById("telefone");
   //let ej = document.querySelector('form > ul').querySelector("#telefone");
   let ej = document.querySelector('form > ul #email');
