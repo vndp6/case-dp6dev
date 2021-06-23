@@ -120,7 +120,7 @@ function loadSobre() {
   //let ej = document.querySelector('form > ul').querySelector("#telefone");
   let ej = document.querySelector('form > ul #email');
 
-  (ej != null) ? em.addEventListener("click", modifySobreEmail, false) : null;
+  (ej != null) ? ej.addEventListener("click", modifySobreEmail, false) : null;
   
 /*
   //ej.addEventListener("change", modifySobreTelefone, false);
