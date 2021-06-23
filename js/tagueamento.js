@@ -19,6 +19,20 @@ gtag('config', 'G-RFZ5Y45RPJ');
 console.log('foi');
 */
 
+function modifySobreEmail() {
+	console.log('modifySobreEmail');
+	alert('chamou');
+	/*let id;
+	console.log(this);
+
+	id = document.getElementById("email").getAttribute('id');
+	console.log(id);
+
+	console.log('chama ga email');
+	ga('send','event','contato',id,'preencheu');
+	console.log('isso ga email. conferir no ga ua');*/
+}
+
 //----------------------
 
 function loadNew() {
@@ -106,6 +120,9 @@ function loadSobre() {
   //let ej = document.querySelector('form > ul').querySelector("#telefone");
   let ej = document.querySelector('form > ul #email');
 
+  (ej != null) ? em.addEventListener("click", modifySobreEmail, false) : null;
+  
+/*
   //ej.addEventListener("change", modifySobreTelefone, false);
   //ej.addEventListener("change", function(e){
   	ej.addEventListener("change", function(){
@@ -120,7 +137,7 @@ function loadSobre() {
 	console.log('chama ga telefone');
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga telefone. conferir no ga ua');
-  }, false);
+  }, false);*/
 
   
   let em = document.getElementById("aceito");
