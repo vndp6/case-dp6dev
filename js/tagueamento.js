@@ -100,9 +100,10 @@ function modifySobreTelefone() {
 	console.log('modifySobreTelefone');
 
 	let id;
-	console.log(this);
+	//console.log(this);
 
-	id = document.getElementById("telefone").getAttribute('id');
+	//id = document.getElementById("telefone").getAttribute('id');
+	id = document.querySelector('form > ul #telefone').getAttribute('id');
 	console.log(id);
 
 	console.log('chama ga telefone');
@@ -185,9 +186,11 @@ function loadSobre() {
 
   //let ek = document.getElementById("email");
   //let ek = document.querySelector('form > ul').querySelector("#email");
-  let em = document.querySelector('form > ul');
-
-  (em != null) ? em.querySelector("#email").addEventListener("change", modifySobreEmail, false) : null;
+  
+  //let em = document.querySelector('form > ul');
+  //(em != null) ? em.querySelector("#email").addEventListener("change", modifySobreEmail, false) : null;
+  let em = document.querySelector('form > ul #email');
+  (em != null) ? em.addEventListener("change", modifySobreEmail, false) : null;
 
   /*if(em != null){
 	em = document.querySelector('form > ul').querySelector("#email");
@@ -209,7 +212,7 @@ function loadSobre() {
 
   //let en = document.getElementById("telefone");
   //let en = document.querySelector('form > ul').querySelector("#telefone");
-  let en = document.querySelector('form > ul #email');
+  let en = document.querySelector('form > ul #telefone');
 
   (en != null) ? en.addEventListener("change", modifySobreTelefone, false) : null;
   
@@ -233,8 +236,13 @@ function loadSobre() {
 
 //****************
 
-  let eo = document.getElementById("aceito");
+  //let eo = document.getElementById("aceito");
+  let eo = document.querySelector('form > ul #aceito');
+
+  (eo != null) ? eo.addEventListener("click", modifySobreAceito, false) : null;
+
   //eo.addEventListener("click", modifySobreAceito, false);
+  /*
   eo.addEventListener("click", function(e){
   	  let id;
 	console.log(this);
@@ -246,7 +254,7 @@ function loadSobre() {
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga aceito. conferir no ga ua');
 
-  }, false);
+  }, false);*/
 
 
 }
