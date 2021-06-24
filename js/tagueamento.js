@@ -137,16 +137,18 @@ function modifySobreSubmit() {
 
 function modifySobreEmail() {
 	console.log('modifySobreEmail');
-	alert('chamou');
-	/*let id;
+
+	let id;
 	console.log(this);
 
-	id = document.getElementById("email").getAttribute('id');
+	//id = document.getElementById("email").getAttribute('id');
+	id = document.querySelector('form > ul #email').getAttribute("id");
 	console.log(id);
 
 	console.log('chama ga email');
 	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga email. conferir no ga ua');*/
+	console.log('isso ga email. conferir no ga ua');
+
 }
 
 //----------------------
@@ -171,91 +173,26 @@ function loadSobre() {
 
 	console.log('loadSobre');
 
-	//essa parte aqui tem que reescrever melhor ... pois só funciona quando esta navegando
-	//na pagina sobre.html
-
-	//let el = document.getElementById("nome");
-	//let el = document.querySelector('form > ul').querySelector("#nome");
-
-			let el = document.querySelector('form > ul');
-			//if( el != null){
+			let el = document.querySelector('form > ul #nome');
 			//	el = document.querySelector('form > ul').querySelector("#nome");
 
-		(el != null) ? el.querySelector("#nome").addEventListener("change", modifySobreNome, false) : null;
+		//(el != null) ? el.querySelector("#nome").addEventListener("change", modifySobreNome, false) : null;
+		(el != null) ? el.addEventListener("change", modifySobreNome, false) : null;
 
-
-  //let ek = document.getElementById("email");
   //let ek = document.querySelector('form > ul').querySelector("#email");
-  
-  //let em = document.querySelector('form > ul');
+
   //(em != null) ? em.querySelector("#email").addEventListener("change", modifySobreEmail, false) : null;
   let em = document.querySelector('form > ul #email');
   (em != null) ? em.addEventListener("change", modifySobreEmail, false) : null;
 
-  /*if(em != null){
-	em = document.querySelector('form > ul').querySelector("#email");
-  //em.addEventListener("change", modifySobreEmail, false);
-  em.addEventListener("change", function(){
-  	  let id;
-	//console.log(this);
-
-	//id = document.getElementById("email").getAttribute('id');
-	id = document.querySelector('form > ul').querySelector("#email").getAttribute("id");
-	console.log(id);
-
-	console.log('chama ga email');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga email. conferir no ga ua');
-  }, false);
-}*/
-
-
-  //let en = document.getElementById("telefone");
   //let en = document.querySelector('form > ul').querySelector("#telefone");
   let en = document.querySelector('form > ul #telefone');
-
   (en != null) ? en.addEventListener("change", modifySobreTelefone, false) : null;
-  
-/*
-  //ej.addEventListener("change", modifySobreTelefone, false);
-  //ej.addEventListener("change", function(e){
-  	ej.addEventListener("change", function(){
 
-  	let id;
-	//console.log(this);
-
-	//id = document.getElementById("telefone").getAttribute('id');
-	id = document.querySelector('form > ul').querySelector("#telefone").getAttribute("id");
-	console.log(id);
-
-	console.log('chama ga telefone');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga telefone. conferir no ga ua');
-  }, false);*/
-
-
-//****************
 
   //let eo = document.getElementById("aceito");
   let eo = document.querySelector('form > ul #aceito');
-
   (eo != null) ? eo.addEventListener("click", modifySobreAceito, false) : null;
-
-  //eo.addEventListener("click", modifySobreAceito, false);
-  /*
-  eo.addEventListener("click", function(e){
-  	  let id;
-	console.log(this);
-
-	id = this.getAttribute('id');
-	console.log(id);
-
-	console.log('chama ga aceito');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga aceito. conferir no ga ua');
-
-  }, false);*/
-
 
 }
 
@@ -266,21 +203,6 @@ function loadAceitoSubmit(){
 	let ep = document.querySelector("form.contato");
 
 	(ep != null) ? ep.addEventListener("submit", modifySobreSubmit ,false) : null;
-
-	//vg.addEventListener("submit", modifySobreSubmit ,false);
-
-	/*
-	//vg.addEventListener("submit", function(e){
-	vg.addEventListener("submit", function(){	
-
-		//console.log(this);
-		console.log('chama ga submit');
-
-		ga('send','event','contato','enviado','enviado');
-
-		console.log('isso ga submit. conferir no ga ua');	
-	} ,false);*/
-
 }
 
 function loadMontadoras() {
@@ -306,7 +228,6 @@ function loadMontadoras() {
 	}
 }
 
-//document.addEventListener("DOMContentLoaded", load, false);
 document.addEventListener("DOMContentLoaded", loadDownload, false);
 document.addEventListener("DOMContentLoaded", loadContato, false);
 document.addEventListener("DOMContentLoaded", loadMontadoras, false);
