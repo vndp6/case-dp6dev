@@ -262,9 +262,14 @@ function loadSobre() {
 function loadAceitoSubmit(){
 	console.log('loadAceitoSubmit');
 
-	let vg = document.querySelector(".contato");
+	//let vg = document.querySelector(".contato");
+	let ep = document.querySelector("form.contato");
+
+	(ep != null) ? ep.addEventListener("submit", modifySobreSubmit ,false) : null;
+
 	//vg.addEventListener("submit", modifySobreSubmit ,false);
 
+	/*
 	//vg.addEventListener("submit", function(e){
 	vg.addEventListener("submit", function(){	
 
@@ -274,7 +279,7 @@ function loadAceitoSubmit(){
 		ga('send','event','contato','enviado','enviado');
 
 		console.log('isso ga submit. conferir no ga ua');	
-	} ,false);
+	} ,false);*/
 
 }
 
