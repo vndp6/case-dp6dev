@@ -5,104 +5,83 @@
 // para fazer a sua coleta.
 // Caso tenha alguma dúvida sobre o case, não hesite em entrar em contato.
 
-/*
-//load assync ga
-window.onload = "https://www.googletagmanager.com/gtag/js?id=G-RFZ5Y45RPJ";
-
-//ga default
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-RFZ5Y45RPJ');
-
-console.log('foi');
-*/
-
 function modifyDownload() {
 
 	console.log('modifyDownload');
-  
-  //let vn = document.querySelector(".menu-lista-download");
-
-  //alert(vn.firstChild.nodeValue);
-  console.log('chama ga download_pdf');
-  ga('send','event','menu','download_pdf','download_pdf');
-  console.log('isso download_pdf. conferir no ga ua');
+	console.log('chama ga download_pdf');
+	ga('send','event','menu','download_pdf','download_pdf');
+	console.log('isso download_pdf. conferir no ga ua');
 }
 
 function modifyContato() {
 
 	console.log('modifyContato');
-
-	//let vn = document.querySelector(".menu-lista-contato");
-
-	//alert(vn.firstChild.nodeValue);
 	console.log('chama ga contato');
 	ga('send','event','menu','entre_em_contato','link_externo');
 	console.log('isso ga contato. conferir no ga ua');
 }
 
 function modifyMontadoras(){
-	console.log('modifyMontadoras');
 
+	console.log('modifyMontadoras');
 	let nome;
 
 	console.log(this);
 	nome = this.getAttribute('data-name');
-	console.log(this.getAttribute('data-name'));
-	console.log(nome);
 
-	console.log('chama ga montadoras');
-	ga('send','event','analise','ver_mais',nome);
-	console.log('isso ga montadoras. conferir no ga ua');
+//console.log(this.getAttribute('data-name'));
+//console.log(nome);
+
+console.log('chama ga montadoras');
+ga('send','event','analise','ver_mais',nome);
+console.log('isso ga montadoras. conferir no ga ua');
 }
 
 function modifySobreNome() {
 	console.log('modifySobreNome');
 
 	let id;
-	//console.log(this);
+//console.log(this);
 
-	/*id = document.getElementById("nome").getAttribute('id');
-	console.log(id);
+/*id = document.getElementById("nome").getAttribute('id');
+console.log(id);
 
-	console.log('chama ga nome');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga nome. conferir no ga ua');*/
+console.log('chama ga nome');
+ga('send','event','contato',id,'preencheu');
+console.log('isso ga nome. conferir no ga ua');*/
 
-	id = document.querySelector('form > ul').querySelector("#nome").getAttribute("id");
-			console.log(id);
+id = document.querySelector('form > ul').querySelector("#nome").getAttribute("id");
+console.log(id);
 
-			console.log('chama ga nome');
-			ga('send','event','contato',id,'preencheu');
-			console.log('isso ga nome. conferir no ga ua');
+console.log('chama ga nome');
+ga('send','event','contato',id,'preencheu');
+console.log('isso ga nome. conferir no ga ua');
 }		
 
 function modifySobreEmail() {
 	console.log('modifySobreEmail');
 
 	let id;
-	//console.log(this);
+//console.log(this);
 
-	id = document.querySelector('form > ul').querySelector("#email").getAttribute("id");
+id = document.querySelector('form > ul').querySelector("#email").getAttribute("id");
 
-	//id = document.getElementById("email").getAttribute('id');
-	console.log(id);
+//id = document.getElementById("email").getAttribute('id');
+console.log(id);
 
-	console.log('chama ga email');
-	ga('send','event','contato',id,'preencheu');
-	console.log('isso ga email. conferir no ga ua');
+console.log('chama ga email');
+ga('send','event','contato',id,'preencheu');
+console.log('isso ga email. conferir no ga ua');
 
 }
 
 function modifySobreTelefone() {
+
 	console.log('modifySobreTelefone');
 
 	let id;
 	//console.log(this);
 
-	//id = document.getElementById("telefone").getAttribute('id');
 	id = document.querySelector('form > ul #telefone').getAttribute('id');
 	console.log(id);
 
@@ -112,6 +91,7 @@ function modifySobreTelefone() {
 }
 
 function modifySobreAceito() {
+	
 	console.log('modifySobreAceito');
 
 	let id;
@@ -126,6 +106,7 @@ function modifySobreAceito() {
 }
 
 function modifySobreSubmit() {
+	
 	console.log('modifySobreSubmit');
 	console.log(this);
 	console.log('chama ga submit');
@@ -136,29 +117,28 @@ function modifySobreSubmit() {
 }
 
 function modifySobreEmail() {
+	
 	console.log('modifySobreEmail');
 
 	let id;
 	console.log(this);
 
-	//id = document.getElementById("email").getAttribute('id');
 	id = document.querySelector('form > ul #email').getAttribute("id");
 	console.log(id);
 
 	console.log('chama ga email');
 	ga('send','event','contato',id,'preencheu');
 	console.log('isso ga email. conferir no ga ua');
-
 }
 
 //----------------------
 
 function loadDownload() {
-	
+
 	console.log('loadNew');
 
 	let el = document.querySelector(".menu-lista-download");
-  	(el != null) ? el.addEventListener("click", modifyDownload, false) : null;
+	(el != null) ? el.addEventListener("click", modifyDownload, false) : null;
 }
 
 function loadContato() {
@@ -166,65 +146,43 @@ function loadContato() {
 	console.log('loadContato');
 
 	let el = document.querySelector(".menu-lista-contato");
-  	(el != null) ? el.addEventListener("click", modifyContato, false) : null;
+	(el != null) ? el.addEventListener("click", modifyContato, false) : null;
 }
 
 function loadSobre() {
 
 	console.log('loadSobre');
 
-			let el = document.querySelector('form > ul #nome');
-			//	el = document.querySelector('form > ul').querySelector("#nome");
+	let el = document.querySelector('form > ul #nome');
+	(el != null) ? el.addEventListener("change", modifySobreNome, false) : null;
 
-		//(el != null) ? el.querySelector("#nome").addEventListener("change", modifySobreNome, false) : null;
-		(el != null) ? el.addEventListener("change", modifySobreNome, false) : null;
+	let em = document.querySelector('form > ul #email');
+	(em != null) ? em.addEventListener("change", modifySobreEmail, false) : null;
 
-  //let ek = document.querySelector('form > ul').querySelector("#email");
+	let en = document.querySelector('form > ul #telefone');
+	(en != null) ? en.addEventListener("change", modifySobreTelefone, false) : null;
 
-  //(em != null) ? em.querySelector("#email").addEventListener("change", modifySobreEmail, false) : null;
-  let em = document.querySelector('form > ul #email');
-  (em != null) ? em.addEventListener("change", modifySobreEmail, false) : null;
-
-  //let en = document.querySelector('form > ul').querySelector("#telefone");
-  let en = document.querySelector('form > ul #telefone');
-  (en != null) ? en.addEventListener("change", modifySobreTelefone, false) : null;
-
-
-  //let eo = document.getElementById("aceito");
-  let eo = document.querySelector('form > ul #aceito');
-  (eo != null) ? eo.addEventListener("click", modifySobreAceito, false) : null;
-
+	let eo = document.querySelector('form > ul #aceito');
+	(eo != null) ? eo.addEventListener("click", modifySobreAceito, false) : null;
 }
 
 function loadAceitoSubmit(){
+
 	console.log('loadAceitoSubmit');
 
-	//let vg = document.querySelector(".contato");
 	let ep = document.querySelector("form.contato");
-
 	(ep != null) ? ep.addEventListener("submit", modifySobreSubmit ,false) : null;
 }
 
 function loadMontadoras() {
+
 	console.log('loadMontadoras');
 
 	let data = document.querySelectorAll('.card-montadoras');
 	let nome;
 
 	for (let i = 0; i < data.length; i++) {
-		//data[i].addEventListener("click", modifyMontadoras, false);
-		data[i].addEventListener("click", function(e){
-
-		console.log(this);
-		nome = this.getAttribute('data-name');
-		console.log(this.getAttribute('data-name'));
-		console.log(nome);
-
-		console.log('chama ga montadoras');
-		ga('send','event','analise','ver_mais',nome);
-		console.log('isso ga montadoras. conferir no ga ua');
-
-		}, false);
+		data[i].addEventListener("click", modifyMontadoras, false);
 	}
 }
 
